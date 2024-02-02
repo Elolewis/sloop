@@ -1,0 +1,8 @@
+dagster
+dagster-webserver
+dagster-docker
+
+
+pandas~=2.0.3
+sqlalchemy~=2.0.19
+requests~=2.31.0
