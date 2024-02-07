@@ -55,7 +55,7 @@ services:
         aliases:
           - warehouse.minio
     ports:
-      - 9001:9001
+      - 9001:9001 # minio ui 
       - 9000:9000
     command: ["server", "/mnt/data", "--console-address", ":9001"]
 
