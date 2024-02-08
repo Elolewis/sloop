@@ -1,7 +1,0 @@
-# Ignore Python virtual environment files
-venv/
-dagster_university/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd

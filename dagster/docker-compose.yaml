@@ -21,9 +21,9 @@ services:
   docker_example_user_code:
     build:
       context: .
-      dockerfile: ./Dockerfile_user_code
+      dockerfile: ./code/project_a/Dockerfile_user_code
     container_name: docker_example_user_code
-    image: docker_example_user_code_image
+    # image: docker_example_user_code_image
     restart: always
     environment:
       DAGSTER_POSTGRES_USER: "postgres_user"
@@ -32,6 +32,12 @@ services:
       DAGSTER_CURRENT_IMAGE: "docker_example_user_code_image"
     networks:
       - docker_example_network
+
+  restarter:
+    image: docker
+    volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
+    command: ["/bin/sh", "-c", "while true; do sleep 3600; docker restart ; done"]
+    restart: unless-stopped
 
   # This service runs dagster-webserver, which loads your user code from the user code container.
   # Since our instance uses the QueuedRunCoordinator, any runs submitted from the webserver will be put on
