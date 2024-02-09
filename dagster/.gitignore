@@ -1,0 +1,5 @@
+#.gitignore
+# Ignore venv directories
+venv
+jaffle_shop
+antonfriberg

@@ -1,6 +1,10 @@
+wheel
 dagster
 dagster-webserver
 dagster-docker
+dagster-aws
+dagster-dbt
+dagster-graphql
 
 
 pandas~=2.0.3
