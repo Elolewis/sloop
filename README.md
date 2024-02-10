@@ -1,4 +1,3 @@
-![logo](logo)
 # Introduction
 Welcome to sloop - a simple, lightweight, open data orchestration platform. Tailored to meet the requirements of data scientists, engineers, and business users, sloop simplifies data engineering without the need for extensive time spent on microservice infrastructure maintenance. This documentation delves into the architecture, components, deployment options, code examples, connectors, best practices, and troubleshooting of our versatile orchestration platform.
 
@@ -15,14 +14,8 @@ File Format: Apache Parquet column-oriented data file format designed for effici
 ### Table Format: Iceberg
 Iceberg is a table format that uses metadata to impose a table structure on top of Parquet files allowing for millions of files to be modified, and queried as if they were a relational database. Iceberg metadata files describe a distributed table structure with snapshots allowing partitioning and time travel, allowing for structured and scalable management of tables within the data lakehouse.
 
-### Query Engine: Trino
-Trino (formerly known as PrestoSQL) is a distributed SQL query engine designed for high-performance analytics distributed data sources. Trino's can reference Iceberg tables and efficiently perform SQL operations across multiple files at once.
+### Query Engine: Spark
 
-### SQL and lineage: dbt
+
+### SQL templating and lineage: dbt
 dbt (Data Build Tool) is a templating workflow that places guardrails around data, enabling analysts to Collaborate on data models, version them, and test and document queries before safely deploying them to production. Complex queries can be decomposed and recompiled for ease of testing, allowing developers to focus on business logic
-
-## Architecture
-![Architecture](architecture)
-
-[architecture]: https://github.com/Elolewis/sloop/images/sloop_architecture.jpg
-[logo]: 
