@@ -1,5 +1,31 @@
-#.gitignore
-# Ignore venv directories
-venv
-jaffle_shop
-antonfriberg
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.coverage
+.pytest_cache/
+
+# Dagster local state
+tmp*/
+*.db
+dagster_home/
+.dagster/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Data and snapshots
+*.gzip
+*.duckdb
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
